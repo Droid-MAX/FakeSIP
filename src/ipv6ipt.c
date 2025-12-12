@@ -107,8 +107,8 @@ int fs_ipt6_setup(void)
         /*
             drop time-exceeded ICMP packets
         */
-        {"iptables", "-w", "-t", "mangle", "-A", "FAKESIP_S", "-p", "icmp",
-         "--icmp-type", "11", "-j", "DROP", NULL},
+        {"ip6tables", "-w", "-t", "mangle", "-A", "FAKESIP_S", "-p", "icmpv6",
+         "--icmpv6-type", "3", "-j", "DROP", NULL},
 
         /*
             exclude non-GUA IPv6 addresses (from source)
