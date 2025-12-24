@@ -35,6 +35,10 @@ General Options:
   -s                 enable silent mode
   -w <file>          write log to <file> instead of stderr
 
+Port Filters:
+  -p <ports>         comma-separated whitelist ports eq 53,80-1000
+  -P <ports>         comma-separated blacklist ports eq 51820,51413
+
 Advanced Options:
   -f                 skip firewall rules
   -g                 disable hop count estimation
@@ -45,7 +49,6 @@ Advanced Options:
   -x <mask>          set the mask for fwmark
   -y <pct>           raise TTL dynamically to <pct>% of estimated hops
   -z                 use iptables commands instead of nft
-
 ```
 
 
